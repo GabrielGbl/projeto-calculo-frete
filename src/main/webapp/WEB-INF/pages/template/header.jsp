@@ -6,45 +6,38 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">          
-   <link rel="stylesheet" href="../css/style.css" type="text/css"/>
-   <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
-   <link rel="stylesheet" href="../css/dashboard.css" type="text/css"/>
-   <link rel="icon" href="../../favicon.ico">
+   <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+   <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
+   <link rel="icon" href="static/img/favicon.ico">
 
-    <title>Inicio</title>
-  
-
-
-	    
+    <title>Projeto Frete</title>
+    
   </head>
 
   <body>
-  
-  
- <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
-    </nav>
+    <nav id="mainNav" class="navbar navbar-inverse">
+                <div class="container">            
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navHeaderCollapse" id="bs-example-navbar-collapse-1">
+                    <ul class="menu nav navbar-nav navbar-right font-navbar">
+                            <li class="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li class="page-scroll">
+                                
+                            </li>                            
+                        </ul>
+                    </div>            
+                </div>        
+            </nav>    

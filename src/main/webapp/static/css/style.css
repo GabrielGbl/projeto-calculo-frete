@@ -1,0 +1,314 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html, body{
+	height: 100%;
+  	min-height: 100%;
+	background-color:#fff;
+}
+
+body  section{
+	padding: 75px 0;
+}
+
+selection { 
+	background: #000;
+	color: #fff; 
+} 
+
+-moz-selection { 
+	background: #000;
+	color: #fff; 
+} 
+
+a:hover {
+	outline: none;
+	text-decoration:none;
+}
+
+a:focus {
+	outline:none;
+	outline-offset: 0;
+}
+
+a {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	color:#7FBFF4;
+}
+
+/* ---------------- MENU ----------------- */
+
+.navbar-nav, .navbar{
+	height:70px;
+	font-size:20px;
+	background-color:#000;
+	border-radius:0;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color:#fff;
+	background-color:#000;
+	margin-top:10px;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#7FBFF4;
+}
+
+/*-------------------- INDEX -------------------- */
+
+.box{
+	height: 75%;
+  	min-height:75%;
+  
+	  display: -ms-flex;
+	  display: -webkit-flex;
+	  display: flex;
+
+	  /* centraliza na vertical */
+	  -ms-align-items: center;
+	  -webkit-align-items: center;
+	  align-items: center;
+
+	  /* centraliza na horizontal */
+	  -ms-justify-content: center;
+	  -webkit-justify-content: center;
+	  justify-content: center;
+}
+
+.escolha{
+  width:auto;
+  height:auto;
+  padding:75px;
+  border-radius:7px;
+  border: 1px solid rgba(0, 144, 255, 0.8);
+  font-size:17px;
+}
+
+.btn-index{
+	width:180px;
+	height:auto;
+	padding:15px;
+	border-radius:15px;
+    border: 1px solid rgba(0, 144, 255, 0.8);
+    background:#fff;
+    margin:5px;
+    color:rgb(0, 144, 255);
+}
+
+.btn-index:hover{
+	background-color:rgb(0, 144, 255);
+	color:#fff;
+	transition: all 2s ease 0s;
+  	-moz-transition: all 2s ease 0s;
+  	-webkit-transition: all 2s ease 0s;
+  	-o-transition: all 2s ease 0s;
+}
+
+
+/* ---------------- CADASTRAR ---------------- */
+
+
+.cadastro{	
+	height:100%;
+  	width:100%;  	
+}
+
+.cadastro-text{
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+	margin:10px;
+}
+
+.form-cadastro, .form-calcular{
+	width:auto;
+  	height:auto;
+  	text-align:center;
+  	padding:30px 50px 30px 50px;
+}
+
+.form-cadastro input{
+	width:100%;
+	position:relative;
+	z-index:2;
+	padding:10px;
+	margin:7px;
+	border:0;
+	border-bottom:#ccc solid 1px; 
+	border-radius:0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.form-cadastro, .form-calcular input:focus{
+	border-bottom: rgb(0, 144, 255) solid 1px;
+	outline: 0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.btn-form{
+	width:180px;
+	height:50px;
+	padding:7px;
+	text-align:center;
+	border-radius:15px;
+    border: 1px solid rgba(0, 144, 255, 0.8);
+    background:#fff;
+    margin:25px 5px 15px 5px;
+    color:rgb(0, 144, 255);
+
+}
+
+.btn-form:hover{
+	background-color:rgb(0, 144, 255);
+	color:#fff;
+	transition: all 2s ease 0s;
+  	-moz-transition: all 2s ease 0s;
+  	-webkit-transition: all 2s ease 0s;
+  	-o-transition: all 2s ease 0s;
+}
+
+.btn{
+	position:absolute;
+	left:495px;
+	top:320px;
+	margin-left:0;	
+}
+
+/* ---------------- CALCULAR ----------------- */
+
+.form-calcular input{
+	width:48%;
+	position:relative;
+	z-index:2;
+	padding:10px;
+	margin:7px;
+	border:0;
+	border-bottom:#ccc solid 1px; 
+	border-radius:0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.btn-calcular{
+	position:absolute;
+	left:495px;
+	top:150px;
+	margin-left:0;
+	
+}
+
+
+/* ---------------- FOOTER ----------------- */
+
+.footer{
+	background-color:#000;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:70px;	
+	color:#fff;
+	padding:10px;
+}
+
+.footer h1{
+	text-align:center;
+	font-size:16px;
+}
+
+/* ------------------- LOGIN ------------------ */
+
+ .login-page {
+                width: 360px;
+                padding: 8% 0 0;
+                margin: auto;
+            }
+            .form {
+                position: relative;
+                z-index: 1;
+                background: #FFFFFF;
+                max-width: 360px;
+                margin: 0 auto 100px;
+                padding: 45px;
+                text-align: center;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            }
+            .form input {
+                font-family: "Roboto", sans-serif;
+                outline: 0;
+                background: #7FBFF4;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 14px;
+                color:#fff;
+            }
+            .form button {
+                font-family: "Roboto", sans-serif;
+                text-transform: uppercase;
+                outline: 0;
+                background: #66B2FF;
+                width: 100%;
+                border: 0;
+                padding: 15px;
+                color: #FFFFFF;
+                font-size: 14px;
+                -webkit-transition: all 0.3 ease;
+                transition: all 0.3 ease;
+                cursor: pointer;
+            }
+            .form button:hover,.form button:active,.form button:focus {
+                background: #43A047;
+            }
+            .form .message {
+                margin: 15px 0 0;
+                color: #b3b3b3;
+                font-size: 12px;
+            }
+            .form .message a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            .form .register-form {
+                display: none;
+            }
+            .container {
+                position: relative;
+                z-index: 1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .container:before, .container:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .container .info {
+                margin: 50px auto;
+                text-align: center;
+            }
+            .container .info h1 {
+                margin: 0 0 15px;
+                padding: 0;
+                font-size: 36px;
+                font-weight: 300;
+                color: #1a1a1a;
+            }
+            .container .info span {
+                color: #4d4d4d;
+                font-size: 12px;
+            }
+            .container .info span a {
+                color: #000000;
+                text-decoration: none;
+            }
+            .container .info span .fa {
+                color: #EF3B3A;
+            }            
