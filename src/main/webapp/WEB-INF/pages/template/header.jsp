@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -8,36 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">          
-   <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
-   <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
-   <link rel="icon" href="static/img/favicon.ico">
-
-    <title>Projeto Frete</title>
+ <link rel="icon" href="<c:url value="/static/img/favicon.ico" />" />
+   <title>Projeto Frete</title>
+ <!--  BOOTSTRAP -->
+    <link href="<c:url value="/static/css/bootstrap.min.css" />" rel="stylesheet">
+     <link href="<c:url value="/static/css/bootstrap-theme.css" />" rel="stylesheet">
+     
     
   </head>
 
   <body>
-    <nav id="mainNav" class="navbar navbar-inverse">
-                <div class="container">            
-                    <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#home"></a>
-                </div>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Fretão</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right" action="controlador-geral?execute=Logout" method="post">
+					<button type="submit" class="btn btn-success">Logout</button>
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
 
-                <div class="collapse navbar-collapse navHeaderCollapse" id="bs-example-navbar-collapse-1">
-                    <ul class="menu nav navbar-nav navbar-right font-navbar">
-                            <li class="hidden">
-                                <a href="#page-top"></a>
-                            </li>
-                            <li class="page-scroll">
-                                
-                            </li>                            
-                        </ul>
-                    </div>            
-                </div>        
-            </nav>    

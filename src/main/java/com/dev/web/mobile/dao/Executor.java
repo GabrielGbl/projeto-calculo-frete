@@ -13,7 +13,7 @@ public class Executor {
 		// INSERT
 		City city = new City();
 		
-		city.setNome("Itajubá");
+		city.setNome("Roseira");
 		city.setGeocodigo(0.0);
 		city.setLatitude(0.0);
 		city.setLongitude(0.0);
@@ -45,7 +45,7 @@ public class Executor {
 		}*/
 		
 		// UPDATE
-		
+		/*
 		city.setId(new Long("5"));	
 		city.setGeocodigo(555555555);
 		city.setLatitude(666666666);
@@ -57,6 +57,7 @@ public class Executor {
 		} catch (ClassNotFoundException | SQLException | IOException e) {
 			System.out.println(e.toString());
 		}
+		*/
 	}
 
 }
