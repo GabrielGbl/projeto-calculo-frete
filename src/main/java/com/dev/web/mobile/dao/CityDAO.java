@@ -1,6 +1,7 @@
 package com.dev.web.mobile.dao;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,11 +26,11 @@ public class CityDAO extends GenericDAO{
 		return INSTANCE;
 	}
 	
-	public List<City> getCities() throws ClassNotFoundException, SQLException, IOException{
+	public List<City> getCities() throws ClassNotFoundException, SQLException, IOException, URISyntaxException{
 		String sql = "SELECT id, nome, geocodigo, latitude, longitude FROM cidade";
 		List<City> cities = new ArrayList<>();
 		
-		List<Object[]> objects = executaSqlSemParametro(getConnection(), sql);
+		List<Object[]> objects = executaSqlSemParametro(getConnectionPoolHeroku(), sql);
 		if (objects != null) {
 			for (Object[] os : objects) {
 				cities.add(castObjectToCity(os));
@@ -38,12 +39,12 @@ public class CityDAO extends GenericDAO{
 		return cities;
 	}
 	
-	public void insert(City city) throws SQLException, ClassNotFoundException, IOException {
+	public void insert(City city) throws SQLException, ClassNotFoundException, IOException, URISyntaxException {
 		String sql = "INSERT INTO city ( nome, geocodigo, latitude, longitude)"
 					+ "VALUES ( ?, ?, ?, ?)";
 		PreparedStatement ps = null;
 		try {
-			ps = getConnectionPool().prepareStatement(sql);
+			ps = getConnectionPoolHeroku().prepareStatement(sql);
 			
 			ps.setString(1, city.getNome());
 			ps.setDouble(2, city.getGeocodigo());
@@ -58,7 +59,7 @@ public class CityDAO extends GenericDAO{
 		}
 	}
 	
-	public ArrayList< City > getAllCity() throws ClassNotFoundException, SQLException, IOException{
+	public ArrayList< City > getAllCity() throws ClassNotFoundException, SQLException, IOException, URISyntaxException{
 		String sql = "SELECT id, nome, geocodigo, latitude, longitude FROM city ";
 		
 		ArrayList< City > citys = new ArrayList< City >();		
@@ -67,7 +68,7 @@ public class CityDAO extends GenericDAO{
 		ResultSet rs = null;
 		
 		try {
-			ps = getConnectionPool().prepareStatement(sql);
+			ps = getConnectionPoolHeroku().prepareStatement(sql);
 			rs  = ps.executeQuery();
 			
 			while(rs.next()){
@@ -90,7 +91,7 @@ public class CityDAO extends GenericDAO{
 				
 	}
 	
-	public City getCityByGeocodigo(double geocodigo) throws ClassNotFoundException, SQLException, IOException{
+	public City getCityByGeocodigo(double geocodigo) throws ClassNotFoundException, SQLException, IOException, URISyntaxException{
 		String sql = "SELECT id, nome, geocodigo, latitude, longitude"
 				+ " FROM city WHERE geocodigo = ?";
 		
@@ -99,7 +100,7 @@ public class CityDAO extends GenericDAO{
 		ResultSet rs = null;
 		
 		try {
-			ps = getConnectionPool().prepareStatement(sql);
+			ps = getConnectionPoolHeroku().prepareStatement(sql);
 			ps.setDouble(1, geocodigo);
 			rs  = ps.executeQuery();
 			
@@ -120,13 +121,13 @@ public class CityDAO extends GenericDAO{
 				
 	}
 	
-	public void update(City city) throws ClassNotFoundException, SQLException, IOException{
+	public void update(City city) throws ClassNotFoundException, SQLException, IOException, URISyntaxException{
 		String sql = "UPDATE city SET nome = ?, geocodigo = ?, latitude = ?, longitude = ? "
 				+ "WHERE id = ?";
 		
 		PreparedStatement ps = null;
 		try {
-			ps = getConnectionPool().prepareStatement(sql);
+			ps = getConnectionPoolHeroku().prepareStatement(sql);
 			
 			ps.setLong(5, city.getId());
 			ps.setString(1, city.getNome());
@@ -142,12 +143,12 @@ public class CityDAO extends GenericDAO{
 		}
 	}
 	
-	public void delete(City city) throws ClassNotFoundException, SQLException, IOException{
+	public void delete(City city) throws ClassNotFoundException, SQLException, IOException, URISyntaxException{
 		String sql = "DELETE FROM city WHERE id = ?";
 		
 		PreparedStatement ps = null;
 		try {
-			ps = getConnectionPool().prepareStatement(sql);			
+			ps = getConnectionPoolHeroku().prepareStatement(sql);			
 			ps.setLong(1, city.getId());			
 			ps.execute();			
 		} finally {
