@@ -1,6 +1,7 @@
 package com.dev.web.mobile.impl;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ import com.dev.web.mobile.util.Constantes;
 public class CarregaTabelaCidades implements Instancia {
 	private static final CityDAO cityDAO = CityDAO.getInstance();
 	@Override
-	public String executa(HttpServletRequest request, HttpServletResponse response) {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws URISyntaxException {
 		ArrayList< City > citys = new ArrayList< City >();
 		
 		
