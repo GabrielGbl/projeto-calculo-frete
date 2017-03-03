@@ -21,7 +21,7 @@ public class CadastraCidade implements Instancia {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-City city = new City();
+		City city = new City();
 		
 
 
@@ -38,4 +38,4 @@ City city = new City();
 		}
 		return Constantes.raizPages + "cadastro-cidade.jsp";
 	}
-	}
+}

@@ -58,6 +58,38 @@ public class CityDAO extends GenericDAO{
 		}
 	}
 	
+	public ArrayList< City > getAllCity() throws ClassNotFoundException, SQLException, IOException{
+		String sql = "SELECT id, nome, geocodigo, latitude, longitude FROM city ";
+		
+		ArrayList< City > citys = new ArrayList< City >();		
+		
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		try {
+			ps = getConnectionPool().prepareStatement(sql);
+			rs  = ps.executeQuery();
+			
+			while(rs.next()){
+				City city = new City();
+				city.setId(rs.getLong(1));
+				city.setNome(rs.getString(2));
+				city.setGeocodigo(rs.getDouble(3));
+				city.setLatitude(rs.getDouble(4));
+				city.setLongitude(rs.getDouble(5));
+				citys.add(city);
+			}
+		} finally {		
+			DbUtil.getInstance().closeQuietly(ps);
+			DbUtil.getInstance().closeQuietly(rs);
+		}
+		
+		System.out.println(citys);
+		
+		return citys;
+				
+	}
+	
 	public City getCityByGeocodigo(double geocodigo) throws ClassNotFoundException, SQLException, IOException{
 		String sql = "SELECT id, nome, geocodigo, latitude, longitude"
 				+ " FROM city WHERE geocodigo = ?";
