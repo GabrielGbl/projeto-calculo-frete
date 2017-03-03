@@ -1,6 +1,7 @@
 package com.dev.web.mobile.impl;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ public class CadastraCidade implements Instancia {
 	}
 
 	@Override
-	public String executa(HttpServletRequest request, HttpServletResponse response) {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws URISyntaxException {
 		City city = new City();
 		
 

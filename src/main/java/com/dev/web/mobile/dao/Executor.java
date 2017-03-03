@@ -1,6 +1,7 @@
 package com.dev.web.mobile.dao;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 
 import com.dev.web.mobile.model.City;
@@ -9,7 +10,7 @@ public class Executor {
 	
 	private static final CityDAO cityDAO = CityDAO.getInstance();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws URISyntaxException {
 		// INSERT
 		City city = new City();
 		

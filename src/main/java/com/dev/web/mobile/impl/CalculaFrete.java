@@ -1,6 +1,7 @@
 package com.dev.web.mobile.impl;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class CalculaFrete implements Instancia {
 	}
 
 	@Override
-	public String executa(HttpServletRequest request, HttpServletResponse response) {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws URISyntaxException {
 		double geocodigoA = new Double(request.getParameter("geocodigoA"));
 		double geocodigoB = new Double(request.getParameter("geocodigoB"));
 		double distance = 0;
